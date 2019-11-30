@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'herokutest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {'default': dj_database_url.config(default='postgres://cdgdftlwiqzmmy:eab76271865518309f4c86488846314ee52cd7fdcd66e666e663f61b0524e5f2@ec2-23-21-249-0.compute-1.amazonaws.com:5432/deakjullj9vmil')}
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
